@@ -38,6 +38,7 @@ background-image: asset-url('cover_image.jpg');
 .btn-xlarge {
   background-color: #073B15;
 }
+
 .btn-xlarge:hover {
   color: #fff;
   text-decoration: none;
@@ -47,14 +48,19 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777
+  color: #777;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 footer a {
   color: #555;
 }
+
 footer a:hover {
   color: #222;
 }
+
 footer small {
   float: left;
 }
@@ -62,6 +68,7 @@ footer ul {
   float: right;
   list-style: none;
 }
+
 footer ul li{
   float: left;
   margin-left: 15px;
@@ -100,3 +107,8 @@ footer ul li{
   font-weight: bold;
   font-size: 1.25em;
 }
+
+.input_checkbox input {
+  width: auto !important;
+}
+
