@@ -34,10 +34,11 @@ class RecipesController < ApplicationController
 		redirect_to recipes_path
 	end
 	private
-	def recipe_params
-		params.require(:recipe).permit(:name, :description)
-	end
+
 	def set_recipe
 		@recipe = Recipe.find(params[:id])
+	end
+	def recipe_params
+		params.require(:recipe).permit(:name, :description)
 	end
 end
