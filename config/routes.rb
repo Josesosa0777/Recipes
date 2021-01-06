@@ -7,9 +7,11 @@ Rails.application.routes.draw do
    	resources :chefs, except: [:new] 
 
    	get '/login', to: 'sessions#new'
-	post '/login', to: "sessions#create"
-	delete '/logout', to: "sessions#destroy"
-	resources :ingredients, except: [:destroy]
-
+    post '/login', to: "sessions#create"
+    delete '/logout', to: "sessions#destroy"
+    resources :ingredients, except: [:destroy]
+    resources :recipes do
+      resources :comments, only: [:create]
+    end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
