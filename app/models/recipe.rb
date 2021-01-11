@@ -14,4 +14,5 @@ class Recipe < ApplicationRecord
 	def thumbs_down_total
 		self.likes.where(like: false).size    
 	end
+	mount_uploader :image, ImageUploader
 end
